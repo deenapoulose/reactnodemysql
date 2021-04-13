@@ -16,6 +16,7 @@ function App() {
         alert('success');
       
       })
+      window.location.reload();
 
   }
   return (
