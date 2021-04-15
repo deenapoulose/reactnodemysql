@@ -47,20 +47,21 @@ app.put('/api/update/:id2',(req,res)=>{
     let sql4= "UPDATE tasktable  SET taskname='"+req.body.uptask+"'   WHERE id =?";
     db.query(sql4,[id2],(err,result)=>{
         console.log(result);
+        res.redirect('/')
        
     });
   
   
 })
 
-// app.get('/',(req,res)=>{
-//     res.send("hai");
-//     // const sql= "insert into tasktable(taskname) values('neww');"
-//     // db.query(sql,(err,result)=>{
-//     //     res.send("hai");
-//     // })
+app.get('/',(req,res)=>{
+    res.send("hai");
+    // const sql= "insert into tasktable(taskname) values('neww');"
+    // db.query(sql,(err,result)=>{
+    //     res.send("hai");
+    // })
     
-// })
+})
 
 app.listen(3002,()=>{
     console.log("running on port  3002");

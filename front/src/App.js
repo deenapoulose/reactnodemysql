@@ -61,7 +61,7 @@ function App() {
  
   alert("updated succesfully");
   setShow(false);
-  window.location.reload();
+  window.location.reload('http://localhost:3000/');
   }
   return (
     <div>
