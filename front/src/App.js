@@ -58,7 +58,7 @@ function App() {
 //   uptaskname:uptask})
   Axios.put(`http://localhost:3002/api/update/${id}`,{
     uptask:uptask})
-  //   // window.location.reload();
+ 
   alert("updated succesfully");
   setShow(false);
   window.location.reload();
@@ -76,7 +76,7 @@ function App() {
     }} /> //
     <button  className='btn btn-primary mx-2' onClick={sub}>ADD</button>
    
-   </div> window.location.reload();
+   </div> 
    <div className="row m-4">
  
     <table class="table table-dark table-striped">
