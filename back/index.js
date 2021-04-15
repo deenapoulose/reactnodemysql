@@ -39,11 +39,7 @@ app.delete('/api/delete/:id',(req,res)=>{
 });
 app.put('/api/update/:id2',(req,res)=>{
     const id2= req.params.id2;
-    // const vf=req.body.uptask;
-    // console.log(vf)
-  
-      
-
+   
     let sql4= "UPDATE tasktable  SET taskname='"+req.body.uptask+"'   WHERE id =?";
     db.query(sql4,[id2],(err,result)=>{
         console.log(result);
@@ -54,14 +50,17 @@ app.put('/api/update/:id2',(req,res)=>{
   
 })
 
-app.get('/',(req,res)=>{
-    res.send("hai");
-    // const sql= "insert into tasktable(taskname) values('neww');"
-    // db.query(sql,(err,result)=>{
-    //     res.send("hai");
-    // })
+// app.get('/',(req,res)=>{
+//     res.send("hai");
+//     const users = tasktable.findAll();
+// console.log(users.every(user => user instanceof tasktable)); // true
+// console.log("All users:", JSON.stringify(users, null, 2));
+//     // const sql= "insert into tasktable(taskname) values('neww');"
+//     // db.query(sql,(err,result)=>{
+//     //     res.send("hai");
+//     // })
     
-})
+// })
 
 app.listen(3002,()=>{
     console.log("running on port  3002");

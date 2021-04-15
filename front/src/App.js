@@ -73,7 +73,7 @@ function App() {
   
     <input type ="text" placeholder ="enter the task"   className=' col form-control' name="taskname" onChange={(e)=>{
       setTaskname(e.target.value)
-    }} /> //
+    }} />
     <button  className='btn btn-primary mx-2' onClick={sub}>ADD</button>
    
    </div> 
