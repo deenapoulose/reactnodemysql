@@ -28,6 +28,30 @@ app.post('/api/insert',(req,res)=>{
        
     });
 })
+app.delete('/api/delete/:id',(req,res)=>{
+    const taskid = req.params.id;
+    //console.log("id",taskid)
+    const sqldel="DELETE FROM  tasktable WHERE id=?;"
+    db.query(sqldel,[taskid],(err,result)=>{
+        console.log(result);
+       
+    });
+});
+app.put('/api/update/:id2',(req,res)=>{
+    const id2= req.params.id2;
+    // const vf=req.body.uptask;
+    // console.log(vf)
+  
+      
+
+    let sql4= "UPDATE tasktable  SET taskname='"+req.body.uptask+"'   WHERE id =?";
+    db.query(sql4,[id2],(err,result)=>{
+        console.log(result);
+       
+    });
+  
+  
+})
 
 // app.get('/',(req,res)=>{
 //     res.send("hai");
